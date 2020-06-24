@@ -6,10 +6,10 @@ The code will be running from command line
 Add Note: `node app.js add --title="add_title" --body="add_body"`
 
 
-Remove Note: node app.js remove --title:"add_title"
+Remove Note: `node app.js remove --title:"add_title"`
 
 
-List Notes: node app.js list
+List Notes: `node app.js list`
 
 
 Read Notes: node app.js read
