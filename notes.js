@@ -8,6 +8,7 @@ const getNotes = () => {
     return "Your notes..."
 }
 
+
 const addNote = (title, body) => {
     const notes = loadNotes()
 
@@ -23,15 +24,13 @@ const addNote = (title, body) => {
     } else {
         console.log("note title taken")
     }
-
-
 }
 
 const saveNotes = (notes) => {
     const dataJSON = JSON.stringify(notes)
     fs.writeFileSync('notes.json', dataJSON)
 }
-// {"title":"Name","body":"ANdrew"}
+
 const removeNote = (title) => {
     const notes = loadNotes()
     const notesToKeep = notes.filter((note) => note.title != title)
@@ -43,7 +42,6 @@ const removeNote = (title) => {
     }
 
     console.log(notes)
-
 }
 
 const loadNotes = () => {
