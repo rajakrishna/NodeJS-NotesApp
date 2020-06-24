@@ -40,7 +40,7 @@ yargs.command({
 			type: "string",
 		},
 	},
-	handler() {
+	handler(argv) {
 		notes.removeNote(argv.title);
 	},
 });
@@ -58,8 +58,15 @@ yargs.command({
 yargs.command({
 	command: "read",
 	describe: "reading the notes",
-	handler() {
-		console.log("Reading");
+	builder: {
+		title: {
+			describe: "Note title",
+			demandOption: true,
+			type: "string",
+		},
+	},
+	handler(argv) {
+		notes.readNotes(argv.title)
 	},
 });
 
