@@ -60,7 +60,10 @@ const loadNotes = () => {
 const listNotes = () => {
     console.log(chalk.white.inverse('Your Notes'))
     const notes = loadNotes()
-    const noteTitle = notes.filter((note) => console.log(note.title))
+    // const noteTitle = notes.filter((note) => console.log(note.title))
+    notes.forEach(note => {
+        console.log(note.title)
+    });
 
 }
 
@@ -68,5 +71,5 @@ module.exports = {
     getNotes: getNotes,
     addNote: addNote,
     removeNote: removeNote,
-    listNOtes: listNotes
+    listNotes: listNotes
 }
