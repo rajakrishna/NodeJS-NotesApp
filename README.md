@@ -23,5 +23,5 @@ List of all the notes
 Read Notes: `node app.js read --title="add_title"`
 
 
-Title and body of the specific note
+Shows title and body of the specific note
  
